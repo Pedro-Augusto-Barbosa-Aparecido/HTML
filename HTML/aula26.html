@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aula sobre eventos - JavaScript</title>
+		<script type="text/javascript">
+			function bt1(){
+				alert("vc clicou no botão...");
+			}
+
+			function fecha_pg(){
+				alert("teu cuzão...")
+			}
+		</script>
+		<style type="text/css">
+			.bt{
+				background-color: red;
+				color: blue;
+				text-align: center;
+				font-family: Arial;
+				font-size: 50px;
+			}
+			.bt:hover{
+				background-color: blue;
+				font-size: 100px;
+				color: rgb(00,00,00);
+			}
+		</style>
+	</head>
+	<body style="background-color: green;" onunload="fecha_pg()">
+		<input class="bt" type="button" value="Aleatório" onclick="bt1()">
+	</body>
+</html>

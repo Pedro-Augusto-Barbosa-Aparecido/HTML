@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aula de javascript - Manipulação de CSS com Js</title>
+		<script type="text/javascript">
+			function formta(){
+				var d = 1;
+				if(d == 1){
+					document.getElementById('aula33').style.backgroundColor="#ff0099";
+				}else if(d == 2){
+					document.getElementById('aula33').style.backgroundColor="#ff0aaa";
+				}else if(d == 3){
+					document.getElementById('aula33').style.backgroundColor="#ad0aaa";
+				}else{
+					d = 0;
+				}
+				d = d + 1;
+		}
+		</script>
+	</head>
+	<body onload="formta()">
+		<div id="aula33">
+			Tomará que funcione a simulação
+		</div>
+	</body>
+</html>

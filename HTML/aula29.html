@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Validação de formulário com Js</title>
+		<script language="javascript" type="text/javascript">
+			function Validação() {
+				if(document.test.com.value == ""){
+					alert("Você não preencheu o campo do comentário");
+					document.test.com.focus();
+					return false;
+				}else if(document.test.ve.value == false){
+					alert("Você esqueceu de preencher um campo obrigatório(verificação de emprego)");
+					return false;
+				}else if(document.test.st.value == false){
+					alert("Você esqueceu de preencher um campo obrigatório(steam tem jogo)");
+					return false;
+				}else if(document.test.nv.value == false){
+					alert("Você esqueceu de preencher um campo obrigatório(número de veiculo)");
+					return false;
+				}else if(document.test.veiculos.value == "0"){
+					alert("Você esqueceu de preencher um campo de escolha de veiculo, volte e preencha ele!!!");
+					return false;
+				}
+			}
+			function mudaCorFoco(obj, state){
+
+				if(state == 1){
+					obj.style.backgroundColor="#ff00ff";
+					obj.style.color="#ffffff";
+				}else{
+					obj.style.backgroundColor="#ffffff";
+					obj.style.color="#000000";
+				}
+
+			}
+		</script>
+		<style type="text/css">
+			body{
+				background-color: #18c4fc
+			}
+			.label{
+				font-size: 30px;
+				font-family: Arial;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<form name="test" onsubmit="return Validação()" method="POST">
+
+			<label class="label">Escreva algo sobre o resistor:</label><br>
+			<input type="text" name="com" size="40" onfocus="mudaCorFoco(this,1)" onblur="mudaCorFoco(this,0)"><br>
+
+			<label class="label">Você tem emprego?</label><br>
+			<input type="radio" name="ve" value="S"><label>Sim</label><br>
+			<input type="radio" name="ve" value="N"><label>Não</label><br>
+
+			<label class="label">Você tem algum jogo na steam?</label><br>
+			<input type="radio" name="st" value="S"><label>Sim</label><br>
+			<input type="radio" name="st" value="N"><label>Não</label><br>
+
+			<label class="label">Você tem outro veiculo?</label><br>
+			<input type="radio" name="nv" value="S"><label>Sim</label><br>
+			<input type="radio" name="nv" value="N"><label>Não</label><br>
+
+			<label class="label">Qual veiculo vc desejaria comprar?</label><br>
+			<select name="veiculos">
+				<option value="0">           </option>
+				<option value="av">Avião</option>
+				<option value="mt">Moto</option>
+				<option value="bk">Bicicleta</option>
+			</select>
+
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<input type="submit" name="envia" value="ENVIAR">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste da logica do aplicativo</title>
+    <style>
+        .bt{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        let name1="kjhhcgvh",name2="sfbs",name3="fdb",name4="sfdb",name5="sdfbs",name6="llnbsk"
+        document.write(name1+" -------- "+name2+" --------- "+name3+" --------- "+name4+" ---------- "+name5+" ---------- "+name6)
+
+        function _sortear(quantidade, maximo) {
+            var numeros = [];
+
+            console.time('Sorteando');
+
+            // Preenche um array com os números de 1 ao maximo
+            for (var numero = 1; numero <= maximo;  numero++) {
+                numeros.push(numero);
+           }
+            
+            numeros.sort(function randomizar(a, b) {
+                return Math.random() * 2 - 1; // Ordena randomicamente
+            });
+
+            console.timeEnd('Sorteando');
+            
+            return numeros.splice(0, quantidade);
+            
+            }
+
+            function sortear(){
+                console.log(_sortear(4, 5).join(','));
+
+                var names=["Pedro" ,"Vinicius" ,"Enzo" ,"João", "Luan","Arroz"];
+                var namesToShow=["","","","","",""]
+                var nuns=_sortear(5, 5);
+
+                const sorteio=()=>{
+                    nuns.push(0)
+
+                    nuns.sort(function randomizar(a, b) {
+                        return Math.random() * 2 - 1; // Ordena randomicamente
+                    });
+
+                    for(var i=0;i<namesToShow.length;i++){
+                        namesToShow[i]=names[nuns[i]]
+                    }
+                    
+                }
+
+                sorteio()
+
+                console.log(namesToShow);
+            }
+            
+            
+
+    </script>
+</head>
+<body>
+    <input type="text" name="nome1" id="001">
+    <input type="text" name="nome2" id="002">
+    <input type="text" name="nome3" id="003">
+    <input type="text" name="nome4" id="004">
+    <input type="text" name="nome5" id="005">
+    <input type="text" name="nome6" id="006">
+    <p></p>
+    <button class="bt" title="Sortear" value="Sortear" onclick="sortear()" >Sortear</button>
+</body>
+</html>

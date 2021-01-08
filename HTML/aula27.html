@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aula sobre formulário</title>
+		<style type="text/css">
+			body{
+				background-color: gray;
+			}
+			.letra{
+				font-size: 50px;
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div align="center">
+			<form name="forever" action="" method="GET">
+				<label class="letra">Nome: </label><br><input type="text" name="apelido" size="40" maxlength="35"><br>
+				<label class="letra">Senha: </label><br><input type="password" name="senha" size="40" maxlength="35"><br>
+
+				<label class="letra">Já possui uma conta?</label><br>
+				<input type="radio" name="verf" value="S"><label>Sim</label><br>
+				<input type="radio" name="verf" value="N"><label>Não</label><br>
+
+				<select name="fuf">
+					<option value="0">           </option>
+					<option value="cr">Carro</option>
+					<option value="mt">Moto</option>
+				</select><br>
+				<label class="letra">Deixe seu comentário sobre veiculos: </label><br>
+				<textarea name="gg" cols="40" rows="3"></textarea><br>
+				<input type="submit" name="envia" value="Envie">
+				<input type="reset" name="limp" value="Clean up">
+				<input type="button" name="kk" value="Do nothing">
+			</form>
+		</div>
+	</body>
+</html>

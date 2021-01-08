@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formatação condicional com JS</title>
+		<script type="text/javascript">
+			function form_tb(){
+				var tab = document.getElementById('tabela_notas');
+				var lin = tab.getElementsByTagName('tr');
+
+				for (var i = 1; i < lin.length - 1; i++){
+					var col = lin[i].getElementsByTagName('td');
+					if(col[l].firstChild.nodeValue() <= 90){
+						lin[i].style.backgroundColor="#ff0000";
+					}else{
+						lin[i].style.backgroundColor="#ff00ff";
+					}
+				}
+			}
+		</script>
+		<style type="text/css">
+			body{
+				background-color: #adf54a;
+			}
+			table{
+				background-color: white;
+				width: 500px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body onload="form_tb()">
+		<table id="tabela_notas" border="1" cellspacing="0" cellpadding="0">
+			<tr id="materia" align="center" style="background-color: gray;">
+				<td>Inglês</td>
+				<td>Matematíca</td>
+				<td>Programação</td>
+			</tr>
+			<tr id="nota" align="center">
+				<td>89</td>
+				<td>78</td>
+				<td>99</td>				
+			</tr>
+			<tr id="nota2" align="center">
+				<td>89</td>
+				<td>78</td>
+				<td>99</td>				
+			</tr>
+			<tr id="nota3" align="center">
+				<td>89</td>
+				<td>78</td>
+				<td>99</td>				
+			</tr>
+			<tr id="nota4" align="center">
+				<td>89</td>
+				<td>78</td>
+				<td>99</td>				
+			</tr>
+			<tr id="nota5" align="center">
+				<td>89</td>
+				<td>78</td>
+				<td>99</td>				
+			</tr>
+		</table>
+	</body>
+</html>

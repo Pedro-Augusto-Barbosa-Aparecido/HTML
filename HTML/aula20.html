@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aula 3 sobre Javascript</title>
+		<script language="Javascript" type="text/javascript">
+			var vidEn = 1500;
+			var nomeChamp = prompt("Digite o nome do seu personagem:", "");
+			if ((nomeChamp == "alsa") == true) {
+				var vida = 3500;
+				var forca = 50;
+			}else {
+				if((nomeChamp == "luan") == true){
+					document.write("<span style='color: #ff00ff; font-size:150px;'> Nome impróprio!!! </span>");
+				}else if((nomeChamp == "Luan") == true){
+					document.write("<span style='color: #ff00ff; font-size:150px;'> Nome impróprio!!! </span>");
+				}else{
+					document.write("<span style='color: #ff00ff; font-size:150px;'> Nome inválido!!! </span>");
+				}
+			}
+			var at = prompt("Deseja atacar?", "");
+			while (vidEn != 0) {
+					if((at == "sim") == true){
+						var num = confirm("Deseja fazer um ataque de 500 de dano?");
+						if (num == true) {
+							vidEn = vidEn - 500;
+							alert("inimigo com 2/3 de vida");
+						} else {
+							num = confirm("Deseja fazer um ataque crítico?");
+							if(num == true){
+								vidEn = 0;
+							}else{
+							document.write("<span style='color: #ff0000; font-size:500px;'> Você foi eliminado </span>");
+							}
+						}
+					}
+				}
+			
+		</script>
+		<style type="text/css">
+			body{
+				background-color: #000000
+			}
+		</style>
+	</head>
+	<body>
+
+	</body>
+</html>
